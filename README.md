@@ -3,9 +3,9 @@
 The webserver sits in front of the API and the UI. It reverse proxies http traffic to the other servers based on context path.
 
 ```
-       | =====>  api 
-    ws |
-       | =====>  ui
+                 |          | =====>  api 
+    browser      |    ws    |
+                 |          | =====>  ui
 
 ```
 
