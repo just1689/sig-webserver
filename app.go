@@ -17,7 +17,7 @@ func main() {
 	if listenAddr == "" {
 		logrus.Fatalln("'", listenAddr, "'", "not a valid listen address")
 	}
-	http.Handle("/api", apiReverseProxy)
+	http.Handle("/ws", apiReverseProxy)
 	http.Handle("/", uiReverseProxy)
 	logrus.Fatalln(http.ListenAndServe(listenAddr, nil))
 
